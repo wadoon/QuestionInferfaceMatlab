@@ -1,10 +1,12 @@
 function [q,a,l] =  runExperiment(gui, blocks)
+%% runs the experiments, that ist defined by blocks data structure on the gui.
+%
+%
 global USER_RESPONSE
 
 showedQuestions = {};
 givenAnswers    = [];
 showLabels      = [];
-
 
 for i = 1 : length(blocks)
     b = blocks(i);

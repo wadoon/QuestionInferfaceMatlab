@@ -1,4 +1,15 @@
 function blocks = buildBlocks(questions, wquestion, wanswer, qcount, ptime)
+%% build the data structure for the runExperiment function.
+%  Input: 
+%    questions  -  The cell array of question for different labels.
+%    wquestions -  question display time for each question (scalar)
+%    wanswer    -  answer display time for each question (scalar)
+%    qcount     -  question count for each block
+%    ptime      -  pause time after each block
+%
+%    Question type is randomize per block and in given sequence.
+% 
+
 
 blockCount = 0;
 labelOrder = [];

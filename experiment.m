@@ -39,12 +39,19 @@ varargout{1} = handles;
 
 % --- Executes on button press in btnYes.
 function setUserResponse(i)
+%% set USER_RESPONSE to i
 global USER_RESPONSE
 USER_RESPONSE = i
 
 
 % --- Executes on key press with focus on figure1 or any of its controls.
 function figure1_WindowKeyPressFcn(hObject, eventdata, handles)
+%% handle incoming key events:
+%   numpad4 || leftarrow => Yes
+%   numpad6 || rightarrow => No
+%
+%   Result in global variable: USER_RESPONSE
+
 if strcmp( eventdata.Key, 'numpad4')  || ...
     strcmp(eventdata.Key, 'leftarrow')
     setUserResponse(1)
